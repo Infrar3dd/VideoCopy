@@ -13,7 +13,7 @@ def downloader(url, path):
 
 url_lst = []
 while True:
-	url_inpt = input("Enter the YouTube url: ")
+	url_inpt = input("Enter the YouTube url or list name: ")
 	if url_inpt == '': 
 		break
 	elif os.path.isfile(url_inpt):
