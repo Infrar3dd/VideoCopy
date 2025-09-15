@@ -1,4 +1,5 @@
 import yt_dlp
+import os
 
 
 def downloader(url, path):
@@ -14,6 +15,10 @@ url_lst = []
 while True:
 	url_inpt = input("Enter the YouTube url: ")
 	if url_inpt == '': 
+		break
+	elif os.path.isfile(url_inpt):
+		with open(url_inpt, 'r') as f:
+			url_lst.extend([line.strip() for line in f if line.strip()])
 		break
 	else:
 		url_lst.append(url_inpt)
