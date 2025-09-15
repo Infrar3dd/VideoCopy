@@ -38,4 +38,4 @@ try:
 except:
 	print("Some errors occured :[ ")
 
-input
+input()
